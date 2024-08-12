@@ -1,11 +1,24 @@
+import java.util.Scanner;
+
 public class ContaTerminal {
     public static void main(String[] args) throws Exception {
-        // TODO: Conhecer e importar a classe Scanner
+        Scanner scanner = new Scanner(System.in);
 
-        // TODO: Exibir as mensagens para o usuário
+        System.out.println("Nome do cliente:");
+        String nomeCliente = scanner.nextLine();
 
-        // TODO: Obter os valores digitados no terminal usando Scanner
+        System.out.println("Agência:");
+        String agencia = scanner.next();
 
-        // TODO: Exibir a mensagem conta criada
+        System.out.println("Conta");
+        int conta = scanner.nextInt();
+
+        System.out.println("Saldo inicial");
+        double saldoInicial = scanner.nextDouble();
+
+        System.out.println("Olá " + nomeCliente + ", obrigado por criar uma conta em nosso banco.");
+        System.out.println("Sua agência é " + agencia + ", conta " + Integer.toString(conta) + ".");
+        System.out.println("Seu saldo de " + String.format("%.2f", Double.valueOf(saldoInicial))
+            + " já está disponível para saque.");
     }
 }
